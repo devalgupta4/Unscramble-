@@ -31,13 +31,7 @@ class GameViewModelTest {
 
     @Test
     fun gameViewModel_Initialization_FirstWordLoaded() {
-        /**
-         *  Warning: This way to retrieve the uiState works because MutableStateFlow is used. In the
-         *  upcoming units you will learn about advanced usages of StateFlow that creates a stream
-         *  of data and you need to react to handle the stream. For those scenarios you will write
-         *  unit tests using different methods/approaches. This applies to all the usages of
-         *  viewModel.uiState.value in this class.
-         **/
+
         val gameUiState = viewModel.uiState.value
         val unScrambledWord = getUnscrambledWord(gameUiState.currentScrambledWord)
 
